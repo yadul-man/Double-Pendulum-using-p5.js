@@ -1,13 +1,18 @@
+// Lengths of the two pendula
 let r1 = 125;
 let r2 = 125;
+// Masses
 let m1 = 10;
 let m2 = 10;
+// Angle
 let a1 = 0;
 let a2 = 0;
+// Angular velocity
 let a1_v = 0;
 let a2_v = 0;
+// Acceleration due to gravity
 let g = 1;
-
+// Relative position of end
 let px2 = -1;
 let py2 = -1;
 let cx, cy;
@@ -30,6 +35,7 @@ function draw() {
   imageMode(CORNER);
   image(buffer, 0, 0, width, height);
 
+  // Calculating motion by plugging in the values to the equation of motion
   let num1 = -g * (2 * m1 + m2) * sin(a1);
   let num2 = -m2 * g * sin(a1 - 2 * a2);
   let num3 = -2 * sin(a1 - a2) * m2;
@@ -54,13 +60,14 @@ function draw() {
   let x2 = x1 + r2 * sin(a2);
   let y2 = y1 + r2 * cos(a2);
 
+  // Draw the pendulum
   line(0, 0, x1, y1);
   fill(0);
 
   line(x1, y1, x2, y2);
   fill(0);
-	
-	ellipse(x1, y1, m1, m1);
+
+  ellipse(x1, y1, m1, m1);
   ellipse(x2, y2, m2, m2);
 
   a1_v += a1_a;
