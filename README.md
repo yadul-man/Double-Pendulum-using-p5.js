@@ -12,8 +12,8 @@ The code that implements this concept is rather simple.
 It only consists of two equations that track the motion of the two masses.
 This is as follows:
 
-![equation](https://github.com/yadul-man/random-files/blob/main/pendulum_eqn.png)
+<img src="output/pendulum_eqn.png">
 
 Once the tweaking of the variables of motion is done, the pendulum exhibits the following motion:
 
-![final_motion](https://github.com/yadul-man/random-files/blob/main/pendulum_final.gif)
+<img src="output/pendulum_final.gif">
